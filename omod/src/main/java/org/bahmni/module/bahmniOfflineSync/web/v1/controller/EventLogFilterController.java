@@ -51,11 +51,7 @@ public class EventLogFilterController extends BaseRestController {
             throw new RuntimeException("Global Property bahmniOfflineSync.strategy is not configured in OpenMRS. Configure classpath for OfflineSyncStrategy");
         }
     }
-    @RequestMapping(method = RequestMethod.GET, value = "/globalProperty")
-    @ResponseBody
-    public String getOpenMrsGlobalProperty(@RequestParam("q") String key) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
-        return syncStrategyLoader.getKeyValueFromGlobalProperties(key);
-    }
+
 
     @RequestMapping(method = RequestMethod.GET, value = "getEventsWithNewFilterForPatients",  params = {"eventRecordUuid"})
     @ResponseBody

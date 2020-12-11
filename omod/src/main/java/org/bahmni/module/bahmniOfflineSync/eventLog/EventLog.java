@@ -79,6 +79,4 @@ public class EventLog {
     public String getParentUuid() {
         return parentUuid;
     }
-
-
 }
